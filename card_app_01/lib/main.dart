@@ -10,6 +10,7 @@ class MyApp extends StatelessWidget{
         backgroundColor: Colors.white,
         body: SafeArea(
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               CircleAvatar(
                 radius: 50.0,
@@ -32,11 +33,49 @@ class MyApp extends StatelessWidget{
                     letterSpacing: 2.5,
                 ),
               ),
-              Container(
-                child: Row(
-                  children: <Widget>[Icon(Icons.email)],
+              SizedBox( height: 20.0, width: 150.0,
+              child: Divider(
+                color: Colors.black,
+              ),),
+              Card(
+                color: Colors.black45,
+                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+                child: Padding(
+                  padding: EdgeInsets.all(7.0),
+                  child: ListTile(
+                    leading: Icon(
+                      Icons.phone,
+                      color: Colors.black
+                    ),
+                    title: Text('+2348012345678',
+                      style: TextStyle(
+                          fontFamily: 'Ubuntu',
+                          fontSize: 18.0
+                      ),
+                    )
+                  ),
                 )
-              )
+              ),
+              Card(
+                color: Colors.black45,
+
+                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+                child: Padding(
+                  padding: EdgeInsets.all(7.0),
+                  child: ListTile(
+                      leading: Icon(
+                          Icons.email,
+                          color: Colors.black
+                      ),
+                      title: Text('adesiyanifedayo@gmail.com',
+                        style: TextStyle(
+                            fontFamily: 'Ubuntu',
+                            fontSize: 18.0
+                        ),
+                      )
+                  ),
+                ),
+              ),
 
             ]
           ),
@@ -45,3 +84,5 @@ class MyApp extends StatelessWidget{
     );
   }
 }
+
+
