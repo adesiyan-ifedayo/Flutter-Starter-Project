@@ -11,6 +11,7 @@ class MyApp extends StatelessWidget{
         body: SafeArea(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
               CircleAvatar(
                 radius: 50.0,
@@ -30,7 +31,7 @@ class MyApp extends StatelessWidget{
                     fontSize: 20.0,
                     color: Colors.black,
                     fontWeight: FontWeight.bold,
-                    letterSpacing: 2.5,
+                    letterSpacing: 4,
                 ),
               ),
               SizedBox( height: 20.0, width: 150.0,
@@ -41,7 +42,7 @@ class MyApp extends StatelessWidget{
                 color: Colors.black45,
                 margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
                 child: Padding(
-                  padding: EdgeInsets.all(7.0),
+                  padding: EdgeInsets.all(1.0),
                   child: ListTile(
                     leading: Icon(
                       Icons.phone,
@@ -61,7 +62,7 @@ class MyApp extends StatelessWidget{
 
                 margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
                 child: Padding(
-                  padding: EdgeInsets.all(7.0),
+                  padding: EdgeInsets.all(1.0),
                   child: ListTile(
                       leading: Icon(
                           Icons.email,
@@ -76,7 +77,24 @@ class MyApp extends StatelessWidget{
                   ),
                 ),
               ),
-
+              Card(
+                color: Colors.black45,
+                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+                child: Padding(
+                  padding: EdgeInsets.all(1.0),
+                  child: ListTile(
+                    leading: Icon(
+                      Icons.house,
+                      color: Colors.black,
+                    ),
+                    title: Text('O2 ARENA',
+                    style: TextStyle(
+                      fontFamily: 'Ubuntu',
+                      fontSize: 18.0
+                    ))
+                  )
+                )
+              ),
             ]
           ),
         ),
