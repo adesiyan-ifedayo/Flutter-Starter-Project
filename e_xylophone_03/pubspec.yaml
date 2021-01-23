@@ -45,14 +45,11 @@ flutter:
   # the material Icons class.
   uses-material-design: true
 
-  fonts:
-    - family: Ubuntu
-      fonts:
-        - asset: fonts/Ubuntu-Light.ttf
+  assets:
+    - assets/
 
   # To add assets to your application, add an assets section, like this:
-  assets:
-    - images/ifedayo.jpg
+
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
