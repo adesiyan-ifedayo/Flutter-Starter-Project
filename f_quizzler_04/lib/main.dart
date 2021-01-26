@@ -20,11 +20,14 @@ class Quizzler extends StatelessWidget {
 }
 
 class QuizPage extends StatefulWidget {
+
   @override
   _QuizPageState createState() => _QuizPageState();
 }
 
 class _QuizPageState extends State<QuizPage> {
+
+  List<Icon> scoreKeeper = [];
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -37,7 +40,7 @@ class _QuizPageState extends State<QuizPage> {
             padding: EdgeInsets.all(10.0),
             child: Center(
               child: Text(
-                'This is where the questsasdion text will go.',
+                'This is where the question text will go.',
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: 25.0,
@@ -51,6 +54,13 @@ class _QuizPageState extends State<QuizPage> {
           child: Padding(
             padding: EdgeInsets.all(15.0),
             child: FlatButton(
+              onPressed:(){
+                setState(() {
+                  scoreKeeper.add(
+                    Icon(Icons.check, color: Colors.green,),
+                  );
+                });
+              },
               textColor: Colors.white,
               color: Colors.green,
               child: Text(
@@ -60,9 +70,6 @@ class _QuizPageState extends State<QuizPage> {
                   fontSize: 20.0,
                 ),
               ),
-              onPressed: () {
-                //The user picked true.
-              },
             ),
           ),
         ),
@@ -79,12 +86,16 @@ class _QuizPageState extends State<QuizPage> {
                 ),
               ),
               onPressed: () {
-                //The user picked false.
+                setState(() {
+                  scoreKeeper.add(Icon(Icons.close, color: Colors.red),);
+                });
               },
             ),
           ),
         ),
-        //TODO: Add a Row here as your score keeper
+        Row(
+          children: scoreKeeper,
+        )
       ],
     );
   }
