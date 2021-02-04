@@ -1,4 +1,4 @@
-#Wed Feb 03 11:31:55 WAT 2021
+#Thu Feb 04 11:42:04 WAT 2021
 base.0=/Users/ifedayo/Documents/Flutter-Starter-Project/g_bmi_calculator_05/build/app/intermediates/dex/debug/mergeDexDebug/out/classes.dex
 path.0=classes.dex
 renamed.0=classes.dex
